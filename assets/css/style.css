@@ -1,69 +1,68 @@
-
-
-body{
-background: grey ;
-
-
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-#start-btn,
-.quiz_intro {
-position: absolute;
-top: 50%;
-left: 50%; 
-transform: translate(-50%, -50%);
-}
 
-/* start button style*/
-#start-btn button{
-font-size: 25px;
-font-weight: 500;
-color:white;
-padding: 15px 30px;
-outline: none;
-border:none;
-border-radius: 5px;
-background:blue;
 
-}
-.quiz_intro {
-display: none;
-width: 540px;
-background: white;
-border-radius: 5px;
-}
-.quiz_intro .box_title {
-    height: 60px;
-    width: 100%;
-    border-bottom: 1px solid blue ;
+body {
+    padding: 0;
+    margin-top: 50%;
+    margin-bottom: 50%;
     display: flex;
+    width: 100vw;
+    justify-content: center;
     align-items: center;
-    padding: 0 35px;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.quiz_intro .rules {
-padding: 15px 35px;
-
-}
-
-
-.quiz_intro .rules .rule {
-margin: 5px 0;
-font-size: 17px;
-
+    background: white ;
 
 
 }
 
-.quiz_intro .rules .rule span {
+.container {
 
-font-weight: 900;
-color: blue;
-
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
 }
 
-.questiond {
+.btn-grid {
     display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+   background-color: rgb(75, 25, 75);
+    box-shadow: 5px 5px;
+    color: whitesmoke;
+
+}
+
+.btn:hover {
+
+background-color: violet;
+
+}
+
+.start-btn  {
+font-size: 20px;
+font-weight: bold;
+padding: 10px 20px;
+
+}
+
+.buttons {
+
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    
+}
+
+.hide {
+    display: none; 
 }
