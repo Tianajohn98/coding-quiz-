@@ -26,6 +26,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    clear:left
 }
 
 .btn-grid {
@@ -65,4 +66,31 @@ padding: 10px 20px;
 
 .hide {
     display: none; 
+}
+
+#Time,
+#Timer,
+#scores {
+text-align: center;
+color: violet;
+
+}
+
+#Timer {
+ 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0%;
+}
+
+
+
+.heading-container {
+display: flex;
+justify-content: space-between;
+display: inline-flex;
+
+
 }
