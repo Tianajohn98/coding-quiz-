@@ -2,27 +2,32 @@ const startButton = document.getElementById('start-btn')
 const quizContainerElement = document.getElementById('quiz-container')
 const questionElement = document.getElementById('quiz-questions')
 const answerButtonElement = document.getElementById('answer-buttons')
+const scoreEl = document.getElementById('Score')
+
 const timeStart = 1
 let time = timeStart * 60
 const timerEl = document.getElementById('Timer')
-let startTime = setInterval(Countdown, 1000)
+startTime = setInterval(Countdown, 1000)
 
-let randomQues, currentQues 
+let randomQues, currentQues
 
 
 
 startButton.addEventListener('click', startQuiz)
 answerButtonElement.addEventListener('click', () => { 
     currentQues++
+    scoreCount()
     nextPage()
 })
 
 
 
 function startQuiz() {
+  
 startButton.classList.add('hide')
 randomQues = questions.sort(() => Math.random() - .5 )
 currentQues = 0
+
 quizContainerElement.classList.remove('hide')
 nextPage()
 } 
@@ -68,16 +73,40 @@ if (randomQues.length > currentQues + 1) {
 
 
 function endQuiz() {
-    
-clearInterval(startTime)
+
+   
+    clearInterval(startTime)
+
 startButton.classList.remove('hide')
+
 quizContainerElement.classList.add('hide')
 
 
 }
 
 
+
+
+
+   function scoreCount() {
+    let score = 0
+    
+  
+    if ( questions.answers.correct == true ) {
+      score++;
+    } 
+    answerButtonElement.addEventListener('click', scoreCount)
+     
+    }
+
+   
+    
+
+
+
+
 function Countdown () {
+    
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
 
